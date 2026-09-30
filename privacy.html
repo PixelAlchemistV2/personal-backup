@@ -14,15 +14,18 @@
 </head>
 <body>
 <h1>Privacy Policy — Personal Backup</h1>
-<p>Last updated: 30 September 2026</p>
+<p>Last updated: 30 September 2026 (scopes aligned with rclone's documentation)</p>
 
 <p>Personal Backup is a private backup automation with a single user: its owner. It is not offered
 to the public and no one else can sign in to it.</p>
 
 <h2>What it accesses</h2>
-<p>With the owner's permission, it uses Google's <code>drive.file</code> permission to create and
-update backup files in the owner's own Google Drive. That permission covers <strong>only files the
-tool created</strong>. It cannot see, read, change or delete any other file in the Drive, and it
+<p>With the owner's permission, it uses the Google Drive permissions that rclone's documentation
+specifies: <code>https://www.googleapis.com/auth/drive</code>,
+<code>https://www.googleapis.com/auth/docs</code> and
+<code>https://www.googleapis.com/auth/drive.metadata.readonly</code>. Those permissions reach the
+owner's whole Drive, but the tool <strong>only reads, creates, updates and deletes files inside its
+own backup folder</strong>. It does not open, change or delete any other file in the Drive, and it
 requests no other Google data — not email, contacts, calendar or profile information beyond what
 Google requires to sign in.</p>
 

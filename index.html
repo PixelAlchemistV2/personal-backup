@@ -21,9 +21,10 @@ Google Drive each night, using the open-source tool <a href="https://rclone.org/
 not a product or a service, is not offered to anyone else, and has exactly one user: the person
 who runs it.</p>
 
-<p>It asks Google for the narrowest Drive permission available, <code>drive.file</code>, which lets it
-see and manage <strong>only the files it created itself</strong>. It cannot see, open or change
-anything else in the Drive. Files are encrypted on the owner's computer before they are uploaded.</p>
+<p>It uses the Google Drive permissions that rclone's documentation specifies (<code>drive</code>,
+<code>docs</code> and <code>drive.metadata.readonly</code>). Although those permissions reach the whole
+Drive, the tool <strong>only ever reads and writes its own backup folder</strong>. Files are
+encrypted on the owner's computer before they are uploaded.</p>
 
 <p><a href="privacy.html">Privacy policy</a></p>
 </body>
